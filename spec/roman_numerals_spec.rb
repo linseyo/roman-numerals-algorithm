@@ -45,6 +45,11 @@ describe 'converting an Arabic number to a Roman numeral' do
     it 'converts 2000 to MM' do
       expect(convert_to_roman(2000)).to eq "MM"
     end
+
+    it 'converts 8553 to MMMMMMMMDLIII' do
+      expect(convert_to_roman(8553)).to eq "MMMMMMMMDLIII"
+    end
+
   end
 
   describe 'modern Roman numerals' do
