@@ -1,3 +1,5 @@
 def convert_to_roman(arabic_number)
-  # Your code goes here
+  roman_numeral = ""
+  arabic_number.times {roman_numeral += "I"}
+  roman_numeral
 end
