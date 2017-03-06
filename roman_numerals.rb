@@ -2,12 +2,16 @@ def convert_to_roman(arabic_number)
   roman_numeral = ""
   running_total = arabic_number
 
-  # num_fifties = (arabic_number/10).floor
-  # num_tens.times {roman_numeral += "X"}
-  # running_total -= num_tens * 10
 
+  num_hundreds = (running_total/100).floor
+  num_hundreds.times {roman_numeral += "C"}
+  running_total -= num_hundreds * 100
 
-  num_tens = (arabic_number/10).floor
+  num_fifties = (running_total/50).floor
+  num_fifties.times {roman_numeral += "L"}
+  running_total -= num_fifties * 50
+
+  num_tens = (running_total/10).floor
   num_tens.times {roman_numeral += "X"}
   running_total -= num_tens * 10
 
