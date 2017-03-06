@@ -84,5 +84,21 @@ describe 'converting an Arabic number to a Roman numeral' do
       expect(convert_to_roman(944, true)).to eq "CMXLIV"
     end
 
+    it 'converts 1 to I' do
+      expect(convert_to_roman(1, true)).to eq "I"
+    end
+
+    it 'converts 18 to XVIII' do
+      expect(convert_to_roman(18, true)).to eq "XVIII"
+    end
+
+    it 'converts 55 to LV' do
+      expect(convert_to_roman(55, true)).to eq "LV"
+    end
+
+    it 'converts 1999 to MCMXCIX' do
+      expect(convert_to_roman(1999, true)).to eq "MCMXCIX"
+    end
+
   end
 end
