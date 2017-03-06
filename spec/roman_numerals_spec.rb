@@ -45,5 +45,34 @@ describe 'converting an Arabic number to a Roman numeral' do
     # Release 3 ...
     # add tests for modern roman numerals here
 
+    it 'converts 4 to IV' do
+      expect(convert_to_roman(4, true)).to eq "IV"
+    end
+
+    it 'converts 9 to IX' do
+      expect(convert_to_roman(9, true)).to eq "IX"
+    end
+
+    it 'converts 49 to XLIX' do
+      expect(convert_to_roman(49, true)).to eq "XLIX"
+    end
+
+    it 'converts 94 to XCIV' do
+      expect(convert_to_roman(94, true)).to eq "XCIV"
+    end
+
+    it 'converts 144 to CXLIV' do
+      expect(convert_to_roman(144, true)).to eq "CXLIV"
+    end
+
+    it 'converts 699 to DCXCIX' do
+      expect(convert_to_roman(699, true)).to eq "DCXCIX"
+    end
+
+    it 'converts 1886 to MDCCCLXXXVI' do
+      expect(convert_to_roman(1886, true)).to eq "MDCCCLXXXVI"
+    end
+
+
   end
 end
