@@ -9,6 +9,16 @@ describe 'converting an Arabic number to a Roman numeral' do
     it 'converts 4 to IIII' do
       expect(convert_to_roman(4)).to eq "IIII"
     end
+     it 'converts 5 to V' do
+      expect(convert_to_roman(5)).to eq "V"
+    end
+     it 'converts 11 to XI' do
+      expect(convert_to_roman(11)).to eq "XI"
+    end
+     it 'converts 1166 to MCLXVI' do
+      expect(convert_to_roman(1166)).to eq "MCLXVI"
+    end
+
 
     # Release 1 ...
     # add tests for old roman numerals here
