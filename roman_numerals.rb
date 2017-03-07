@@ -1,12 +1,20 @@
 def convert_to_roman(arabic_number)
-  # Converts arabic number into "I"
-  arabic_array = [1, 4]
-  roman_array = ["I", "IIII"]
+  # 1000's
+  m = "M"*(arabic_number/1000)
+  remaining = arabic_number%1000
 
-  # Converts arabic 1 to "I"
-  arabic_index = arabic_array.find_index(arabic_number)
-  roman_string = roman_array[arabic_index]
+  
+  d = "D"*(remaining/500)
+  remaining = remaining%500
+
+  
+  c = "C"*(remaining/100)
+  remaining = remaining%100
+
+  l = "L"*(remaining/50)
+  remaining = remaining%50
 
 
 
-end
+
+
