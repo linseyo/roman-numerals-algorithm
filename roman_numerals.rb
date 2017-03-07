@@ -1,6 +1,6 @@
 
 # converts arabic numbers to old roman for V and I
-def convert_to_roman(arabic_number)
+def convert_to_roman(arabic_number, modern = false)
   roman_number = ""
   left_to_assign = arabic_number
 
