@@ -1,6 +1,8 @@
 
 # converts arabic numbers to old roman for V and I
 def convert_to_roman(arabic_number, modern = false)
+ if !modern
+  # old conversion
   roman_number = ""
   left_to_assign = arabic_number
 
@@ -44,6 +46,29 @@ def convert_to_roman(arabic_number, modern = false)
   i_quantity.times {
     roman_number += "I"
   }
+ else
+  # modern conversion
+  roman_number = ""
+  left_to_assign = arabic_number
 
-  roman_number
+  m_quantity = left_to_assign/1000
+  roman_number += 'M' * m_quantity
+  left_to_assign -= (m_quantity * 1000)
+
+  c_quantity = left_to_assign/100
+  case c_quantity
+    when 1..3
+      roman_number += 'C' * c_quantity
+    when 4
+      roman_number += 'CD'
+    when 5..8
+      roman_number += 'D'
+      roman_number += 'C' * (c_quantity - 5)
+    when 9
+      roman_number += 'CM'
+  end
+  left_to_assign -= (c_quantity * 100)
+
+ end
+roman_number
 end

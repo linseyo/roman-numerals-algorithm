@@ -53,6 +53,28 @@ describe 'converting an Arabic number to a Roman numeral' do
   describe 'modern Roman numerals' do
     # Release 3 ...
     # add tests for modern roman numerals here
+    it 'converts 1 to I' do
+      expect(convert_to_roman(1, true)).to eq "I"
+    end
 
+    it 'converts 4 to IV' do
+      expect(convert_to_roman(4, true)).to eq "IV"
+    end
+
+    it 'converts 100 to C' do
+      expect(convert_to_roman(100, true)).to eq "C"
+    end
+
+    it 'converts 400 to CD' do
+      expect(convert_to_roman(400, true)).to eq "CD"
+    end
+
+    it 'converts 2400 to MMCD' do
+      expect(convert_to_roman(2400, true)).to eq "MMCD"
+    end
+
+    it 'converts 2900 to MMCM' do
+      expect(convert_to_roman(2900, true)).to eq "MMCM"
+    end
   end
 end
