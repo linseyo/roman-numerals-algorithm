@@ -29,16 +29,24 @@ describe 'converting an Arabic number to a Roman numeral' do
       expect(convert_to_roman(8)).to eq "VIII"
     end
 
-    it 'converts 13 to VVIII' do
-      expect(convert_to_roman(13)).to eq "VVIII"
+    it 'converts 13 to XIII' do
+      expect(convert_to_roman(13)).to eq "XIII"
     end
 
-    it 'converts 15 to VVV' do
-      expect(convert_to_roman(15)).to eq "VVV"
+    it 'converts 57 to LVII' do
+      expect(convert_to_roman(57)).to eq "LVII"
     end
 
-    it 'converts 16 to VVVI' do
-      expect(convert_to_roman(16)).to eq "VVVI"
+    it 'converts 235 to CCXXXV' do
+      expect(convert_to_roman(235)).to eq "CCXXXV"
+    end
+
+    it 'converts 603 to DCIII' do
+      expect(convert_to_roman(603)).to eq "DCIII"
+    end
+
+     it 'converts 3000 to MMM' do
+      expect(convert_to_roman(3000)).to eq "MMM"
     end
   end
 
