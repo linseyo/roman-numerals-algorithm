@@ -27,6 +27,10 @@ describe 'converting an Arabic number to a Roman numeral' do
     it 'converts 37 to XXXVII' do
       expect(convert_to_roman(37)).to eq "XXXVII"
     end
+
+    it 'converts 99 to LXXXXVIIII' do
+      expect(convert_to_roman(99)).to eq "LXXXXVIIII"
+    end
   end
 
   describe 'modern Roman numerals' do
