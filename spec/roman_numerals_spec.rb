@@ -18,6 +18,18 @@ describe 'converting an Arabic number to a Roman numeral' do
      it 'converts 1166 to MCLXVI' do
       expect(convert_to_roman(1166)).to eq "MCLXVI"
     end
+     it 'converts 4 to IV' do
+      expect(convert_to_roman(4,true)).to eq "IV"
+    end
+      it 'converts 9 to CD' do
+      expect(convert_to_roman(9,true)).to eq "IX"
+    end
+     it 'converts 944 to CMXLIV' do
+      expect(convert_to_roman(944,true)).to eq "CMXLIV"
+    end
+
+
+
 
 
     # Release 1 ...
