@@ -61,16 +61,60 @@ describe 'converting an Arabic number to a Roman numeral' do
       expect(convert_to_roman(4, true)).to eq "IV"
     end
 
+    it 'converts 5 to V' do
+      expect(convert_to_roman(5, true)).to eq "V"
+    end
+
+    it 'converts 9 to IX' do
+      expect(convert_to_roman(9, true)).to eq "IX"
+    end
+
+    it 'converts 10 to X' do
+      expect(convert_to_roman(10, true)).to eq "X"
+    end
+
+    it 'converts 40 to XL' do
+      expect(convert_to_roman(40, true)).to eq "XL"
+    end
+
+    it 'converts 90 to XC' do
+      expect(convert_to_roman(90, true)).to eq "XC"
+    end
+
     it 'converts 100 to C' do
       expect(convert_to_roman(100, true)).to eq "C"
+    end
+
+    it 'converts 240 to CCXL' do
+      expect(convert_to_roman(240, true)).to eq "CCXL"
+    end
+
+    it 'converts 250 to CCL' do
+      expect(convert_to_roman(250, true)).to eq "CCL"
+    end
+
+    it 'converts 290 to CCXC' do
+      expect(convert_to_roman(290, true)).to eq "CCXC"
     end
 
     it 'converts 400 to CD' do
       expect(convert_to_roman(400, true)).to eq "CD"
     end
 
+    it 'converts 500 to D' do
+      expect(convert_to_roman(500, true)).to eq "D"
+    end
+
+    it 'converts 990 to CMXC' do
+      expect(convert_to_roman(990, true)).to eq "CMXC"
+    end
+
     it 'converts 2400 to MMCD' do
       expect(convert_to_roman(2400, true)).to eq "MMCD"
+    end
+
+    it 'converts 2500 to MMD' do
+      expect(convert_to_roman(2500, true)).to eq "MMD"
     end
 
     it 'converts 2900 to MMCM' do
