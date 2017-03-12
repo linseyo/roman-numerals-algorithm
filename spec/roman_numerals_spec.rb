@@ -50,6 +50,20 @@ describe 'converting an Arabic number to a Roman numeral' do
       expect(convert_to_roman(8553)).to eq "MMMMMMMMDLIII"
     end
 
+# seth's tests
+
+    it 'outputs to stdout' do
+      expect {convert_to_roman(23).to output('XXIII').to_stdout}
+    end
+
+    it 'errors on invalid input' do
+      expect {convert_to_roman("f").to output('sorry, input not valid.').to_stdout}
+    end
+
+    it 'handles decimal input' do
+      expect(convert_to_roman(23.3)).to eq "XXIII"
+    end
+
   end
 
   describe 'modern Roman numerals' do
