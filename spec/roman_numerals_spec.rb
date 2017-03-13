@@ -17,14 +17,28 @@ describe 'converting an Arabic number to a Roman numeral' do
     it 'converts 15 to XV' do
       expect(convert_to_roman(15)).to eq "XV"
     end
-    # Release 1 ...
-    # add tests for old roman numerals here
+
+    it 'converts 3182 to MMMCLXXXII' do
+      expect(convert_to_roman(3182)).to eq "MMMCLXXXII"
+    end
+
+    it 'converts 2578 to MMDLXXVIII' do
+      expect(convert_to_roman(2578)).to eq "MMDLXXVIII"
+    end
+
+    it 'converts 1102 to MCII' do
+      expect(convert_to_roman(1102)).to eq "MCII"
+    end
 
   end
 
   describe 'modern Roman numerals' do
-    # Release 3 ...
-    # add tests for modern roman numerals here
+    it 'converts 1143 to MCXLIII' do
+      expect(convert_to_roman(1143, true)).to eq "MCXLIII"
+    end
 
+    it 'converts 2974 to MMCMLXXIV' do
+      expect(convert_to_roman(2974, true)).to eq "MMCMLXXIV"
+    end
   end
 end
