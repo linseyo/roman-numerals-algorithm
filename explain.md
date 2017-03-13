@@ -77,7 +77,3 @@ end
 def add_to_response(arabic_number, equivalents)
 	equivalents.key * digit_div_num(arabic_number)
 end 
-
-
-
-
