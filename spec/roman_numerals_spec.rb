@@ -21,6 +21,14 @@ describe 'converting an Arabic number to a Roman numeral' do
     it 'converts 10 to X' do
       expect(convert_to_roman(10)).to eq "X"
     end
+
+    it 'converts 101 to CI' do
+      expect(convert_to_roman(101)).to eq "CI"
+    end
+
+    it 'converts 700 to DCC' do
+      expect(convert_to_roman(700)).to eq "DCC"
+    end
   end
 
   context 'modern true' do
