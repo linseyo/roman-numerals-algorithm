@@ -12,6 +12,12 @@ describe 'converting an Arabic number to a Roman numeral' do
       { arabic: 10, roman: 'X' },
       { arabic: 11, roman: 'XI' },
       { arabic: 15, roman: 'XV' },
+      { arabic: 20, roman: 'XX' },
+      { arabic: 37, roman: 'XXXVII' },
+      { arabic: 49, roman: 'XXXXVIIII' },
+      { arabic: 50, roman: 'L' },
+      { arabic: 78, roman: 'LXXVIII' },
+      { arabic: 5432, roman: 'MMMMMCCCCXXXII' },
     ]
     tests.each do |test|
       arabic = test[:arabic]
@@ -20,12 +26,6 @@ describe 'converting an Arabic number to a Roman numeral' do
         expect(convert_to_roman(arabic)).to eq(roman)
       end
     end
-
-    xit 'converts 3000 to MMM' do
-      expect(convert_to_roman(3000)).to eq "MMM"
-    end
-
-
   end
 
   xdescribe 'modern Roman numerals' do
