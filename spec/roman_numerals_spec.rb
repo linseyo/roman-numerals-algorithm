@@ -6,6 +6,10 @@ describe 'converting an Arabic number to a Roman numeral' do
       expect(convert_to_roman(1)).to eq "I"
     end
 
+    it 'converts 2 to II' do
+      expect(convert_to_roman(2)).to eq "II"
+    end
+
     it 'converts 4 to IIII' do
       expect(convert_to_roman(4)).to eq "IIII"
     end
@@ -14,14 +18,14 @@ describe 'converting an Arabic number to a Roman numeral' do
       expect(convert_to_roman(5)).to eq "V"
     end
 
-    it 'converts 3000 to MMM' do
+    xit 'converts 3000 to MMM' do
       expect(convert_to_roman(3000)).to eq "MMM"
     end
 
-    
+
   end
 
-  describe 'modern Roman numerals' do
+  xdescribe 'modern Roman numerals' do
     # Release 3 ...
     # add tests for modern roman numerals here
 
