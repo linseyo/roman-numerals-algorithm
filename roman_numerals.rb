@@ -8,17 +8,11 @@ def convert_to_roman(arabic_number)
     when 500...1000
       remainder, roman_numeral = number_to_roman(remainder, roman_numeral, 500, 'D')
     when 100...500
-      factor_to_multiply = remainder / 100
-      roman_numeral += 'C' * factor_to_multiply
-      remainder = remainder - (100 * factor_to_multiply)
+      remainder, roman_numeral = number_to_roman(remainder, roman_numeral, 100, 'C')
     when 50...100
-      factor_to_multiply = remainder / 50
-      roman_numeral += 'L' * factor_to_multiply
-      remainder = remainder - (50 * factor_to_multiply)
+      remainder, roman_numeral = number_to_roman(remainder, roman_numeral, 50, 'L')
     when 10...50
-      factor_to_multiply = remainder / 10
-      roman_numeral += 'X' * factor_to_multiply
-      remainder = remainder - (10 * factor_to_multiply)
+      remainder, roman_numeral = number_to_roman(remainder, roman_numeral, 10, 'X')
     else
       roman_numeral += 'V'
       remainder = remainder - 5
