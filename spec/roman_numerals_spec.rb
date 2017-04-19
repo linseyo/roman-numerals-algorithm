@@ -2,20 +2,23 @@ require_relative '../roman_numerals'
 
 describe 'converting an Arabic number to a Roman numeral' do
   describe 'old Roman numerals' do
-    it 'converts 1 to I' do
-      expect(convert_to_roman(1)).to eq "I"
-    end
 
-    it 'converts 2 to II' do
-      expect(convert_to_roman(2)).to eq "II"
-    end
-
-    it 'converts 4 to IIII' do
-      expect(convert_to_roman(4)).to eq "IIII"
-    end
-
-    it 'converts 5 to V' do
-      expect(convert_to_roman(5)).to eq "V"
+    tests = [
+      { arabic: 1, roman: 'I' },
+      { arabic: 2, roman: 'II' },
+      { arabic: 4, roman: 'IIII' },
+      { arabic: 5, roman: 'V' },
+      { arabic: 6, roman: 'VI' },
+      { arabic: 10, roman: 'X' },
+      { arabic: 11, roman: 'XI' },
+      { arabic: 15, roman: 'XV' },
+    ]
+    tests.each do |test|
+      arabic = test[:arabic]
+      roman = test[:roman]
+      it "converts #{arabic} to #{roman}" do
+        expect(convert_to_roman(arabic)).to eq(roman)
+      end
     end
 
     xit 'converts 3000 to MMM' do
