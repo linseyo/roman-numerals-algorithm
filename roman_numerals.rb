@@ -47,7 +47,7 @@ end
 
 def number_to_modern_roman(remainder, roman_numeral, divide_by, roman_letter)
   if remainder >= divide_by
-    remainder = remainder - (divide_by)
+    remainder = remainder - divide_by
     roman_numeral += roman_letter
   end
   return remainder, roman_numeral
